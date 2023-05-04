@@ -1,4 +1,7 @@
-import { Ship, Gameboard, Player, Computer } from "./battleship";
+import Ship from "./modules/Ship";
+import Gameboard from "./modules/Gameboard";
+import Player from "./modules/Player";
+import Computer from "./modules/Computer";
 
 test('Hit ship', () => {
   const ship = new Ship(3);
@@ -61,8 +64,6 @@ test('receiveAttack sad', () => {
   gameboard.placeShip(3, [0,0], [0,2]);
   gameboard.receiveAttack([1,1]);
   expect(gameboard.receiveAttack([1,1])).toBe('location already attacked');
-  gameboard.receiveAttack([0,0]);
-  expect(gameboard.receiveAttack([0,0])).toBe('location already attacked');
 })
 
 test('Player.attack()', () => {

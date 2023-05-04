@@ -12,10 +12,10 @@
     },
     "ignorePatterns": ["*test.js"],
     "rules": {
-        "max-classes-per-file": "off",
         "class-methods-use-this": "off",
         "consistent-return": "off",
         "no-empty": "off",
-        "brace-style":"off"
+        "brace-style":"off",
+        "no-restricted-syntax": "off"
     }
 }
