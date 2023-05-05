@@ -10,7 +10,7 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "ignorePatterns": ["*test.js", "*config.js"],
+    "ignorePatterns": ["*test.js", "*config.js", "*Mock.js"],
     "rules": {
         "class-methods-use-this": "off",
         "consistent-return": "off",

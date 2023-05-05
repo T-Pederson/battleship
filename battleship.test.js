@@ -1,7 +1,7 @@
-import Ship from "./modules/Ship";
-import Gameboard from "./modules/Gameboard";
-import Player from "./modules/Player";
-import Computer from "./modules/Computer";
+import Ship from "./src/modules/Ship";
+import Gameboard from "./src/modules/Gameboard";
+import Player from "./src/modules/Player";
+import Computer from "./src/modules/Computer";
 
 test('Hit ship', () => {
   const ship = new Ship(3);
