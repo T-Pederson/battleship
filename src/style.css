@@ -104,7 +104,7 @@ h3 {
 	background-color: rgb(49, 152, 200);
 }
 
-.not_attacked:hover {
+.computer_board .not_attacked:hover {
 	opacity: 60%;
 }
 

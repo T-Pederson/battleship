@@ -31,7 +31,7 @@ export default class Gameboard {
 
     // Create ship object and place references to it in gameboard array between start and end points
     const ship = new Ship(length);
-    if (start[0] > end[0]) {
+    if (start[0] !== end[0]) {
       for (let i = start[0]; i <= end[0]; i += 1) {
         this.gameboardArray[i][start[1]] = ship;
       }
@@ -49,14 +49,17 @@ export default class Gameboard {
     // Check if location was already attacked
     if (this.checkAttackedLocation(coord)) return 'location already attacked';
 
+    this.attackedLocations.push(coord);
+
     // If attacked location was a part of a ship, hit it and check if it sunk
     if (attackLocation !== undefined) {
       attackLocation.hit();
       // if ship sunk add it to the sunk ships counter
       if (attackLocation.isSunk() === true) this.sunkShips += 1;
+      return 'hit';
     }
 
-    this.attackedLocations.push(coord);
+    return 'miss';
   }
 
   checkAttackedLocation(coord) {

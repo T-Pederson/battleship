@@ -7,6 +7,6 @@ export default class Player {
   }
 
   attack(target, coord) {
-    target.gameboard.receiveAttack(coord);
+    return target.gameboard.receiveAttack(coord);
   }
 }
