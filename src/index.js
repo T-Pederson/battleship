@@ -15,3 +15,11 @@ import './style.css';
 // computer.gameboard.placeShip(3, [3,7], [3,9]);
 // computer.gameboard.placeShip(4, [0,4], [0,7]);
 // computer.gameboard.placeShip(5, [4,0], [9,0]);
+
+for (const space of document.querySelectorAll('.computer_board div')) {
+  space.addEventListener('click', () => {
+    let coord = space.id;
+    coord = coord.slice(1);
+    console.log(coord);
+  });
+}

@@ -1,3 +1,8 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+	v2.0 | 20110126
+  License: none (public domain)
+*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -15,7 +20,103 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
+	font: inherit;
 	vertical-align: baseline;
-  list-style: none;
-  text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	height: 100vh;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	font-size: 5em;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 3em;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 2.5em;
+	font-weight: bold;
+}
+
+.game {
+	display: flex;
+	width: 80%;
+	justify-content: space-around;
+}
+
+.player,
+.computer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+}
+
+.player_board,
+.computer_board {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+	gap: 2px;
+	background-color: black;
+	border: 2px solid black;
+}
+
+.player_board div,
+.computer_board div {
+	height: 30px;
+	width: 30px;
+}
+
+.not_attacked {
+	background-color: rgb(49, 152, 200);
+}
+
+.not_attacked:hover {
+	opacity: 60%;
+}
+
+.missed {
+	background-color: rgb(49, 152, 200);
+	opacity: 60%;
+}
+
+.ship {
+	background-color: gray;
+}
+
+.hit {
+	background-color: red;
 }
