@@ -2,6 +2,7 @@ import Ship from './modules/Ship';
 import Gameboard from './modules/Gameboard';
 import Player from './modules/Player';
 import Computer from './modules/Computer';
+import './style.css';
 
 // Main gameplay loop function
 // player.gameboard.placeShip(2, [9,7], [9,6]);
