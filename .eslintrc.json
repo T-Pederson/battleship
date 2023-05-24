@@ -17,6 +17,7 @@
         "no-empty": "off",
         "brace-style":"off",
         "no-restricted-syntax": "off",
-        "no-loop-func": "off"
+        "no-loop-func": "off",
+        "no-param-reassign": "off"
     }
 }

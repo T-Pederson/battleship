@@ -6,7 +6,7 @@ export default class Ship {
   }
 
   hit() {
-    // Increments hits by 1 and checks if ship is sunk
+    // Increments hits by 1
     this.hits += 1;
   }
 
